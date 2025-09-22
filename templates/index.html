@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🍲 Recipe Organization 🍲</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <style>
+        body{
+            background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20240328/pngtree-healthy-thai-food-recipes-concept-image_15645273.jpg');
+            height: 10vh;
+            background-size: cover;
+            
+        }
+    </style>
+        <H1>🍽️ WelCome to Recipe Organizer 🍽️</H1>
+       
+        <form method="POST" action="/add">
+            <input type="text" name="title" placeholder="Recipe Title" required>
+            <textarea name="ingredients" placeholder="Ingredients (comma separated)" required></textarea>
+            <textarea name="steps" placeholder="Steps to Prepare" required></textarea>
+            <input type="text" name="time" placeholder="Time Required (e.g. 30 mins⏳)" required>
+            <button type="submit">Add Recipe ➕</button>
+        </form>
+
+       
+    </div>
+</body>
+</html>
